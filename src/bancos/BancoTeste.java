@@ -11,6 +11,7 @@ public class BancoTeste {
 		double valor;
 		char opcao;
 		
+		
 		System.out.println("Banco Teste para uso");
 		ContaPoupanca cp = new ContaPoupanca(1, "010.467.522-51", 15);
 		ContaCorrente dm = new ContaCorrente(2,"319.561.590-88");
@@ -56,15 +57,7 @@ public class BancoTeste {
 			}
 		}
 		System.out.println("Saldo total: R$ " + dm.getSaldoConta());
-		System.out.println("Você deseja imprimir talão(S ou N)? ");
-		opcao = sc.next().toUpperCase().charAt(0);
-		while (opcao != 'S' && opcao != 'N') {
-			System.out.println("\nOpção inválida. Deseja continuar? ");
-			opcao = sc.next().toUpperCase().charAt(0);
-		}
-		System.out.println("Digite a quantidade de talões que deseja imprimir: ");
-		quantidadeTalao = sc.nextInt();
-		dm.retornaTalao(quantidadeTalao);		
+		dm.talao(dm.getTalao(), dm.getQtdTalao());	
 		sc.close();
 	}
 
