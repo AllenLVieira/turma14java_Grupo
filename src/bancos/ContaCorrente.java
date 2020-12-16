@@ -1,7 +1,5 @@
 package bancos;
 
-import java.util.Scanner;
-
 public class ContaCorrente extends Conta 
 {
 	protected int numeroTalaoCheque;
