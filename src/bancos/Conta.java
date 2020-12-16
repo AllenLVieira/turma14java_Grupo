@@ -50,7 +50,6 @@ public abstract class Conta {
 		} else {
 			this.saldoConta = this.saldoConta - valor;
 		}
-		// amo lasanha, adoro uisque e nunca fiquei de dp na faculdade
 	}
 
 }
