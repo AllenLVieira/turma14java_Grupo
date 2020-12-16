@@ -1,5 +1,9 @@
 package bancos;
 
+
+
+import java.util.Scanner;
+
 public class ContaCorrente extends Conta 
 {
 	protected int numeroTalaoCheque;
@@ -17,12 +21,12 @@ public class ContaCorrente extends Conta
 	
 	public int retornaTalao(int quantidadeTalao) {		
 		if (quantidadeTalao < 0 || quantidadeTalao > 3) {
-			System.out.println("Quantidade inválida!");
+			System.out.println("Quantidade invÃ¡lida!");
 		}
 		else {
 			numeroTalaoCheque+=quantidadeTalao;
 		}
-		System.out.printf("Número de talões impressos até o momento: %d",numeroTalaoCheque);
+		System.out.printf("NÃºmero de talÃµes impressos atÃ© o momento: %d",numeroTalaoCheque);
 		return numeroTalaoCheque;
 	}
 }
