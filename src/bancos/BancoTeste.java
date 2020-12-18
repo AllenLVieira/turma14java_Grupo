@@ -6,11 +6,12 @@ public class BancoTeste {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		/*
-		 * List<ContaPoupanca> contap = new ArrayList<>(); List<ContaCorrente> contac =
-		 * new ArrayList<>(); List<ContaEspecial> contae = new ArrayList<>();
-		 * List<ContaEmpresa> contaemp = new ArrayList<>();
-		 */
+
+		List<ContaPoupanca> contap = new ArrayList<>();
+		List<ContaCorrente> contac = new ArrayList<>();
+		List<ContaEspecial> contae = new ArrayList<>();
+		List<ContaEmpresa> contaemp = new ArrayList<>();
+
 		final int MAX_MOVIMENTOS = 3;
 		int data, operacao, numeroConta = 0, tamanho = 50;
 		double valor, valorEmprestimo;
@@ -47,7 +48,7 @@ public class BancoTeste {
 					System.out.println("Digite a data de aniversario da conta: ");
 					int dataAniversario = sc.nextInt();
 					ContaPoupanca cp = new ContaPoupanca(numeroConta, cpfConta, dataAniversario);
-					// contap.add(cp);
+					contap.add(cp);
 					System.out.println("Digite a data de hoje: ");
 					data = sc.nextInt();
 					linha(tamanho);
@@ -56,6 +57,7 @@ public class BancoTeste {
 					System.out.println("\nNúmero da conta: " + cp.getNumConta());
 					System.out.println("CPF: " + cp.getCpfConta());
 					System.out.println("Aniversário da conta: " + cp.getDataAniversarioConta());
+					System.out.println("Saldo da conta: "+cp.getSaldoConta());
 					linha(tamanho);
 					for (int i = 0; i < MAX_MOVIMENTOS; i++) {
 						do {
@@ -86,6 +88,7 @@ public class BancoTeste {
 					linha(tamanho);
 					System.out.println("\nNúmero da conta: " + dm.getNumConta());
 					System.out.println("CPF: " + dm.getCpfConta());
+					System.out.println("Saldo da conta: "+dm.getSaldoConta());
 					linha(tamanho);
 					for (int i = 0; i < MAX_MOVIMENTOS; i++) {
 						do {
@@ -115,6 +118,7 @@ public class BancoTeste {
 					linha(tamanho);
 					System.out.println("\nNúmero da conta: " + dv.getNumConta());
 					System.out.println("CPF: " + dv.getCpfConta());
+					System.out.println("Saldo da conta: "+dv.getSaldoConta());
 					linha(tamanho);
 					for (int i = 0; i < MAX_MOVIMENTOS; i++) {
 						do {
@@ -148,6 +152,7 @@ public class BancoTeste {
 					linha(tamanho);
 					System.out.println("\nNúmero da conta: " + mg.getNumConta());
 					System.out.println("CPF: " + mg.getCpfConta());
+					System.out.println("Saldo da conta: "+mg.getSaldoConta());
 					linha(tamanho);
 					for (int i = 0; i < MAX_MOVIMENTOS; i++) {
 						do {
