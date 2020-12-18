@@ -45,11 +45,23 @@ public abstract class Conta {
 	}
 
 	public void retirar(double valor) {
-		if (valor > this.saldoConta) {
-			System.out.println("Operação cancelada. Saldo insuficiente.");
-		} else {
+		if(testarSaldo(valor)) {
 			this.saldoConta = this.saldoConta - valor;
 		}
+		else {
+			System.out.println("Saldo indisponível!");
+		}
 	}
+	
+	public boolean testarSaldo(double valor) {
+        boolean teste;
+        if (valor <=this.saldoConta) {
+            teste = true;
+        }
+        else {
+            teste = false;
+        }
+        return teste;
+    }
 
 }
