@@ -45,23 +45,21 @@ public abstract class Conta {
 	}
 
 	public void retirar(double valor) {
-		if(testarSaldo(valor)) {
+		if (testarSaldo(valor)) {
 			this.saldoConta = this.saldoConta - valor;
-		}
-		else {
+		} else {
 			System.out.println("Saldo indisponível!");
 		}
 	}
-	
+
 	public boolean testarSaldo(double valor) {
-        boolean teste;
-        if (valor <=this.saldoConta) {
-            teste = true;
-        }
-        else {
-            teste = false;
-        }
-        return teste;
-    }
+		boolean teste;
+		if (valor <= this.saldoConta) {
+			teste = true;
+		} else {
+			teste = false;
+		}
+		return teste;
+	}
 
 }
